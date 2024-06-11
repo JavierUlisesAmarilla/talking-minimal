@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   //       that you are the only one to have access to that code!
   const nodeAvatar = document.getElementById('avatar');
   head = new TalkingHead(nodeAvatar, {
-    ttsEndpoint: "https://eu-texttospeech.googleapis.com/v1beta1/text:synthesize",
+    ttsEndpoint: import.meta.env.VITE_GOOGLE_TTS_API_URL,
     ttsApikey: import.meta.env.VITE_GOOGLE_TTS_API_KEY, // <- Change this
     cameraView: "upper"
   });
